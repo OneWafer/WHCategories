@@ -3,7 +3,7 @@ version = "0.02";
 Pod::Spec.new do |s|
   s.name         = "WHCategories"
   s.version      = version
-  s.summary      = "WHCategories , a collection of useful Objective-C Categories extending iOS Frameworks."
+  s.summary      = "a collection of useful Objective-C Categories extending iOS Frameworks"
   s.description      = <<-DESC
                        WHCategories , a collection of useful Objective-C Categories extending iOS Frameworks.
                        DESC
