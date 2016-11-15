@@ -209,7 +209,7 @@
 - (BOOL)wh_isCarNumber
 {
     // 车牌号:湘K-DE829 香港车牌号码:粤Z-J499港
-    NSString *carRegex = @"^[\u4e00-\u9fff]{1}[a-zA-Z]{1}[-][a-zA-Z_0-9]{4}[a-zA-Z_0-9_\u4e00-\u9fff]$";//其中\u4e00-\u9fa5表示unicode编码中汉字已编码部分，\u9fa5-\u9fff是保留部分，将来可能会添加
+    NSString *carRegex = @"^[\u4e00-\u9fff]{1}[a-zA-Z]{1}[a-zA-Z_0-9]{4}[a-zA-Z_0-9_\u4e00-\u9fff]$";//其中\u4e00-\u9fa5表示unicode编码中汉字已编码部分，\u9fa5-\u9fff是保留部分，将来可能会添加
     return [self wh_isValidateByRegex:carRegex];
 }
 

@@ -9,8 +9,10 @@
 #ifndef WHUIKit_h
 #define WHUIKit_h
 
+#import "UIAlertView+WHBlock.h"
 #import "UIBarButtonItem+WHExtension.h"
 #import "UIBarButtonItem+WHBadge.h"
+#import "UIButton+WHBlock.h"
 #import "UIButton+WHCountDown.h"
 #import "UIButton+WHImagePosition.h"
 #import "UIColor+WHHEX.h"

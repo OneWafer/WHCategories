@@ -23,6 +23,8 @@
 		662608971DD3063B00F83B88 /* UIButton+WHImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 662608891DD3063B00F83B88 /* UIButton+WHImagePosition.m */; };
 		662608981DD3063B00F83B88 /* UIColor+WHHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 6626088C1DD3063B00F83B88 /* UIColor+WHHEX.m */; };
 		662608991DD3063B00F83B88 /* UIView+WHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6626088F1DD3063B00F83B88 /* UIView+WHFrame.m */; };
+		66C92C2F1DDADE11005CA1B7 /* UIButton+WHBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C92C2E1DDADE11005CA1B7 /* UIButton+WHBlock.m */; };
+		66C92C331DDAE2E6005CA1B7 /* UIAlertView+WHBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C92C321DDAE2E6005CA1B7 /* UIAlertView+WHBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		6626088F1DD3063B00F83B88 /* UIView+WHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WHFrame.m"; sourceTree = "<group>"; };
 		662608901DD3063B00F83B88 /* WHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoundation.h; sourceTree = "<group>"; };
 		662608911DD3063B00F83B88 /* WHUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHUIKit.h; sourceTree = "<group>"; };
+		66C92C2D1DDADE11005CA1B7 /* UIButton+WHBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WHBlock.h"; sourceTree = "<group>"; };
+		66C92C2E1DDADE11005CA1B7 /* UIButton+WHBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WHBlock.m"; sourceTree = "<group>"; };
+		66C92C311DDAE2E6005CA1B7 /* UIAlertView+WHBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+WHBlock.h"; sourceTree = "<group>"; };
+		66C92C321DDAE2E6005CA1B7 /* UIAlertView+WHBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+WHBlock.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,10 +206,11 @@
 		6626087F1DD3063B00F83B88 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				66C92C301DDAE149005CA1B7 /* UIAlertView */,
 				662608801DD3063B00F83B88 /* UIBarButtonItem */,
 				662608851DD3063B00F83B88 /* UIButton */,
 				6626088A1DD3063B00F83B88 /* UIColor */,
-				6626088D1DD3063B00F83B88 /* UIview */,
+				6626088D1DD3063B00F83B88 /* UIView */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -222,6 +229,8 @@
 		662608851DD3063B00F83B88 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
+				66C92C2D1DDADE11005CA1B7 /* UIButton+WHBlock.h */,
+				66C92C2E1DDADE11005CA1B7 /* UIButton+WHBlock.m */,
 				662608861DD3063B00F83B88 /* UIButton+WHCountDown.h */,
 				662608871DD3063B00F83B88 /* UIButton+WHCountDown.m */,
 				662608881DD3063B00F83B88 /* UIButton+WHImagePosition.h */,
@@ -239,13 +248,23 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
-		6626088D1DD3063B00F83B88 /* UIview */ = {
+		6626088D1DD3063B00F83B88 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
 				6626088E1DD3063B00F83B88 /* UIView+WHFrame.h */,
 				6626088F1DD3063B00F83B88 /* UIView+WHFrame.m */,
 			);
+			name = UIView;
 			path = UIview;
+			sourceTree = "<group>";
+		};
+		66C92C301DDAE149005CA1B7 /* UIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				66C92C311DDAE2E6005CA1B7 /* UIAlertView+WHBlock.h */,
+				66C92C321DDAE2E6005CA1B7 /* UIAlertView+WHBlock.m */,
+			);
+			path = UIAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +404,8 @@
 				662608971DD3063B00F83B88 /* UIButton+WHImagePosition.m in Sources */,
 				662608991DD3063B00F83B88 /* UIView+WHFrame.m in Sources */,
 				662608981DD3063B00F83B88 /* UIColor+WHHEX.m in Sources */,
+				66C92C2F1DDADE11005CA1B7 /* UIButton+WHBlock.m in Sources */,
+				66C92C331DDAE2E6005CA1B7 /* UIAlertView+WHBlock.m in Sources */,
 				662608931DD3063B00F83B88 /* NSString+WHNormalRegEx.m in Sources */,
 				662608921DD3063B00F83B88 /* NSString+WHDate.m in Sources */,
 				6626084D1DD305F600F83B88 /* ViewController.m in Sources */,
@@ -625,6 +646,7 @@
 				662608711DD305F600F83B88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		662608721DD305F600F83B88 /* Build configuration list for PBXNativeTarget "WHCategoriesDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +655,7 @@
 				662608741DD305F600F83B88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		662608751DD305F600F83B88 /* Build configuration list for PBXNativeTarget "WHCategoriesDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -641,6 +664,7 @@
 				662608771DD305F600F83B88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
