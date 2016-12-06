@@ -17,6 +17,6 @@
 #import "UIButton+WHImagePosition.h"
 #import "UIColor+WHHEX.h"
 #import "UIView+WHFrame.h"
-
+#import "UIView+WHGesture.h"
 
 #endif /* WHUIKit_h */

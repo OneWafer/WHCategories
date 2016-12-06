@@ -14,10 +14,17 @@ typedef void(^WHUIAlertViewCallBackBlock)(NSInteger buttonIndex);
 
 @property (nonatomic, copy) WHUIAlertViewCallBackBlock wh_alertViewCallBackBlock;
 
-+ (void)wh_alertWithCallBackBlock:(WHUIAlertViewCallBackBlock)alertWithCallBackBlock
-                            title:(NSString *)title
-                          message:(NSString *)message
-                 cancelButtonName:(NSString *)cancelButtonName
-                otherButtonTitles:(NSString *)otherButtonTitles,...NS_REQUIRES_NIL_TERMINATION;
+/**
+ @param title 标题文字
+ @param message 信息文字
+ @param cancelButtonTitle 取消按钮文字
+ @param otherButtonTitles 其他按钮(数组)
+ @param alertWithCallBackBlock 执行方法Block
+ */
++ (void)wh_alertWithTitle:(NSString *)title
+                  message:(NSString *)message
+        cancelButtonTitle:(NSString *)cancelButtonTitle
+        otherButtonTitles:(NSArray *)otherButtonTitles
+            CallBackBlock:(WHUIAlertViewCallBackBlock)alertWithCallBackBlock;
 
 @end

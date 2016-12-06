@@ -9,8 +9,12 @@
 #ifndef WHFoundation_h
 #define WHFoundation_h
 
+#import "NSArray+WHBlock.h"
+#import "NSDate+WHExtension.h"
+#import "NSDictionary+WHBlock.h"
+#import "NSMutableArray+WHBlock.h"
+#import "NSMutableDictionary+WHBlock.h"
 #import "NSString+WHNormalRegEx.h"
-#import "NSString+WHDate.h"
 
 
 #endif /* WHFoundation_h */
