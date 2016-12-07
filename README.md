@@ -11,4 +11,4 @@ pod 'WHCategories'
 ```
 ### Manually
 
-Copy JKCategories folder to your project
+Copy WHCategories folder to your project
