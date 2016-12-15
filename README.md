@@ -4,7 +4,7 @@ WHCategories , a collection of useful Objective-C Categories extending iOS Frame
 # Installation
 
 ### CocoaPods
-The easiest way of installing HMSegmentedControl is via [CocoaPods](http://cocoapods.org/). 
+The easiest way of installing WHCategories is via [CocoaPods](http://cocoapods.org/). 
 
 ```
 pod 'WHCategories'
