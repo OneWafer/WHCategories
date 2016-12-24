@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^WHTouchedButtonBlock)(NSInteger tag);
+typedef void(^WHTouchedButtonBlock)(UIButton *sender);
 
 @interface UIButton (WHBlock)
 

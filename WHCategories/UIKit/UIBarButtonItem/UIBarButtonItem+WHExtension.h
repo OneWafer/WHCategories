@@ -13,36 +13,47 @@ typedef NS_ENUM(NSInteger, WHItemType) {
     WHItemTypeRight = 1,               // 右边的按钮
 };
 
+typedef void(^WHTouchedBarButtonItemBlock)(UIButton *sender);
+
 @interface UIBarButtonItem (WHExtension)
 
 /**
  图标UIBarButtonItem
  
- @param type      左侧or右侧按钮
- @param norImage  按钮图标
- @param highImage 按钮高亮图标
- @param target    目标
- @param action    点击事件
- @param offset    图标偏移量
+ @param type         左侧or右侧按钮
+ @param norImage     按钮图标
+ @param highImage    按钮高亮图标
+ @param offset       图标偏移量
+ @param touchHandler 点击事件处理
  
  */
-+ (instancetype)wh_itemWithType:(WHItemType)type norImage:(NSString *)norImage highImage:(NSString *)highImage target:(id)target action:(SEL)action offset:(CGFloat)offset;
++ (instancetype)wh_itemWithType:(WHItemType)type
+                       norImage:(NSString *)norImage
+                      highImage:(NSString *)highImage
+                         offset:(CGFloat)offset
+                  actionHandler:(WHTouchedBarButtonItemBlock)touchHandler;
+
 
 
 
 /**
  文字UIBarButtonItem
  
- @param type      左侧or右侧按钮
- @param norTitle  按钮文字
- @param font      按钮文字字体
- @param norColor  按钮字体颜色
- @param highColor 按钮字体高亮颜色
- @param target    目标
- @param action    点击事件
- @param offset    文字偏移量
+ @param type         左侧or右侧按钮
+ @param norTitle     普通状态文字
+ @param font         文字字体大小
+ @param norColor     普通状态文字颜色
+ @param highColor    高亮状态文字颜色
+ @param offset       偏移量
+ @param touchHandler 点击事件处理
  
  */
-+ (instancetype)wh_itemWithType:(WHItemType)type norTitle:(NSString *)norTitle font:(CGFloat)font norColor:(UIColor *)norColor highColor:(UIColor *)highColor target:(id)target action:(SEL)action offset:(CGFloat)offset;
++ (instancetype)wh_itemWithType:(WHItemType)type
+                       norTitle:(NSString *)norTitle
+                           font:(CGFloat)font
+                       norColor:(UIColor *)norColor
+                      highColor:(UIColor *)highColor
+                         offset:(CGFloat)offset
+                  actionHandler:(WHTouchedBarButtonItemBlock)touchHandler;
 
 @end
