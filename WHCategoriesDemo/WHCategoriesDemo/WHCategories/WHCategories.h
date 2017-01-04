@@ -9,6 +9,7 @@
 #ifndef WHCategories_h
 #define WHCategories_h
 
+#import "WHMacros.h"
 #import "WHFoundation.h"
 #import "WHUIKit.h"
 

@@ -53,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		538521AE1E1D38CB003D4137 /* WHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHMacros.h; sourceTree = "<group>"; };
+		538521AF1E1D4135003D4137 /* WHUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHUIKit.h; sourceTree = "<group>"; };
+		538521B01E1D413F003D4137 /* WHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoundation.h; sourceTree = "<group>"; };
 		662608421DD305F600F83B88 /* WHCategoriesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHCategoriesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662608461DD305F600F83B88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		662608481DD305F600F83B88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,8 +86,6 @@
 		6626088C1DD3063B00F83B88 /* UIColor+WHHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WHHEX.m"; sourceTree = "<group>"; };
 		6626088E1DD3063B00F83B88 /* UIView+WHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WHFrame.h"; sourceTree = "<group>"; };
 		6626088F1DD3063B00F83B88 /* UIView+WHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WHFrame.m"; sourceTree = "<group>"; };
-		662608901DD3063B00F83B88 /* WHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoundation.h; sourceTree = "<group>"; };
-		662608911DD3063B00F83B88 /* WHUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHUIKit.h; sourceTree = "<group>"; };
 		666485AD1DEFC08C00B25F94 /* UIView+WHGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WHGesture.h"; path = "WHCategoriesDemo/WHCategories/UIKit/UIView/UIView+WHGesture.h"; sourceTree = SOURCE_ROOT; };
 		666485AE1DEFC08C00B25F94 /* UIView+WHGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WHGesture.m"; path = "WHCategoriesDemo/WHCategories/UIKit/UIView/UIView+WHGesture.m"; sourceTree = SOURCE_ROOT; };
 		666485B41DF01FE500B25F94 /* NSArray+WHBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WHBlock.h"; sourceTree = "<group>"; };
@@ -202,8 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				669F97031DF55C30008CF98B /* WHCategories.h */,
-				662608901DD3063B00F83B88 /* WHFoundation.h */,
-				662608911DD3063B00F83B88 /* WHUIKit.h */,
+				538521AE1E1D38CB003D4137 /* WHMacros.h */,
 				662608791DD3063B00F83B88 /* Foundation */,
 				6626087F1DD3063B00F83B88 /* UIKit */,
 			);
@@ -213,6 +213,7 @@
 		662608791DD3063B00F83B88 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				538521B01E1D413F003D4137 /* WHFoundation.h */,
 				666485B31DF01F7D00B25F94 /* NSArray */,
 				669F96FF1DF55B65008CF98B /* NSDate */,
 				669F97081DF69679008CF98B /* NSDictionary */,
@@ -236,6 +237,7 @@
 		6626087F1DD3063B00F83B88 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				538521AF1E1D4135003D4137 /* WHUIKit.h */,
 				66C92C301DDAE149005CA1B7 /* UIAlertView */,
 				662608801DD3063B00F83B88 /* UIBarButtonItem */,
 				662608851DD3063B00F83B88 /* UIButton */,
