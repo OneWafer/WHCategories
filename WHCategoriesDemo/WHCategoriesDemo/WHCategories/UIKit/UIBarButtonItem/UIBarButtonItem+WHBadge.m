@@ -72,7 +72,7 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
     
 }
 
-- (CGSize) badgeExpectedSize
+- (CGSize)badgeExpectedSize
 {
     UILabel *frameLabel = [self duplicateLabel:self.badge];
     [frameLabel sizeToFit];
@@ -142,7 +142,7 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 #pragma mark - getters/setters
--(UILabel*) badge {
+- (UILabel*)badge {
     UILabel* lbl = objc_getAssociatedObject(self, &UIBarButtonItem_badgeKey);
     if(lbl==nil) {
         lbl = [[UILabel alloc] initWithFrame:CGRectMake(self.badgeOriginX, self.badgeOriginY, 20, 20)];
@@ -153,16 +153,16 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
     }
     return lbl;
 }
--(void)setBadge:(UILabel *)badgeLabel
+- (void)setBadge:(UILabel *)badgeLabel
 {
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeKey, badgeLabel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 /** badge的值发生变化 */
--(NSString *)badgeValue {
+- (NSString *)badgeValue {
     return objc_getAssociatedObject(self, &UIBarButtonItem_badgeValueKey);
 }
--(void) setBadgeValue:(NSString *)badgeValue
+- (void)setBadgeValue:(NSString *)badgeValue
 {
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeValueKey, badgeValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
@@ -172,10 +172,10 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 /** badge的背景色 */
--(UIColor *)badgeBGColor {
+- (UIColor *)badgeBGColor {
     return objc_getAssociatedObject(self, &UIBarButtonItem_badgeBGColorKey);
 }
--(void)setBadgeBGColor:(UIColor *)badgeBGColor
+- (void)setBadgeBGColor:(UIColor *)badgeBGColor
 {
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeBGColorKey, badgeBGColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (self.badge) {
@@ -184,10 +184,10 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 /** 字体颜色 */
--(UIColor *)badgeTextColor {
+- (UIColor *)badgeTextColor {
     return objc_getAssociatedObject(self, &UIBarButtonItem_badgeTextColorKey);
 }
--(void)setBadgeTextColor:(UIColor *)badgeTextColor
+- (void)setBadgeTextColor:(UIColor *)badgeTextColor
 {
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeTextColorKey, badgeTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (self.badge) {
@@ -196,10 +196,10 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 /** 字体大小 */
--(UIFont *)badgeFont {
+- (UIFont *)badgeFont {
     return objc_getAssociatedObject(self, &UIBarButtonItem_badgeFontKey);
 }
--(void)setBadgeFont:(UIFont *)badgeFont
+- (void)setBadgeFont:(UIFont *)badgeFont
 {
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeFontKey, badgeFont, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (self.badge) {
@@ -208,11 +208,11 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 /** badge的大小 */
--(CGFloat) badgePadding {
+- (CGFloat)badgePadding {
     NSNumber *number = objc_getAssociatedObject(self, &UIBarButtonItem_badgePaddingKey);
     return number.floatValue;
 }
--(void) setBadgePadding:(CGFloat)badgePadding
+- (void)setBadgePadding:(CGFloat)badgePadding
 {
     NSNumber *number = [NSNumber numberWithDouble:badgePadding];
     objc_setAssociatedObject(self, &UIBarButtonItem_badgePaddingKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -222,11 +222,11 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 
--(CGFloat) badgeMinSize {
+- (CGFloat)badgeMinSize {
     NSNumber *number = objc_getAssociatedObject(self, &UIBarButtonItem_badgeMinSizeKey);
     return number.floatValue;
 }
--(void) setBadgeMinSize:(CGFloat)badgeMinSize
+- (void)setBadgeMinSize:(CGFloat)badgeMinSize
 {
     NSNumber *number = [NSNumber numberWithDouble:badgeMinSize];
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeMinSizeKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -236,11 +236,11 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 
--(CGFloat) badgeOriginX {
+- (CGFloat)badgeOriginX {
     NSNumber *number = objc_getAssociatedObject(self, &UIBarButtonItem_badgeOriginXKey);
     return number.floatValue;
 }
--(void) setBadgeOriginX:(CGFloat)badgeOriginX
+- (void)setBadgeOriginX:(CGFloat)badgeOriginX
 {
     NSNumber *number = [NSNumber numberWithDouble:badgeOriginX];
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeOriginXKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -249,11 +249,11 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
     }
 }
 
--(CGFloat) badgeOriginY {
+- (CGFloat)badgeOriginY {
     NSNumber *number = objc_getAssociatedObject(self, &UIBarButtonItem_badgeOriginYKey);
     return number.floatValue;
 }
--(void) setBadgeOriginY:(CGFloat)badgeOriginY
+- (void)setBadgeOriginY:(CGFloat)badgeOriginY
 {
     NSNumber *number = [NSNumber numberWithDouble:badgeOriginY];
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeOriginYKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -263,7 +263,7 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 /** 当值为0的时候,移除badge */
--(BOOL) shouldHideBadgeAtZero {
+- (BOOL)shouldHideBadgeAtZero {
     NSNumber *number = objc_getAssociatedObject(self, &UIBarButtonItem_shouldHideBadgeAtZeroKey);
     return number.boolValue;
 }
@@ -277,10 +277,11 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 /** 当值发生变化的时候，有个弹性动画 */
--(BOOL) shouldAnimateBadge {
+- (BOOL)shouldAnimateBadge {
     NSNumber *number = objc_getAssociatedObject(self, &UIBarButtonItem_shouldAnimateBadgeKey);
     return number.boolValue;
 }
+
 - (void)setShouldAnimateBadge:(BOOL)shouldAnimateBadge
 {
     NSNumber *number = [NSNumber numberWithBool:shouldAnimateBadge];

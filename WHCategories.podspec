@@ -1,4 +1,4 @@
-version = "0.05";
+version = "0.06";
 
 Pod::Spec.new do |s|
   s.name         = "WHCategories"

@@ -43,8 +43,6 @@ static const void *wh_UIAlertViewKey = &wh_UIAlertViewKey;
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (self.wh_alertViewCallBackBlock) {
-        self.wh_alertViewCallBackBlock(buttonIndex);
-    }
+    if (self.wh_alertViewCallBackBlock) self.wh_alertViewCallBackBlock(buttonIndex);
 }
 @end

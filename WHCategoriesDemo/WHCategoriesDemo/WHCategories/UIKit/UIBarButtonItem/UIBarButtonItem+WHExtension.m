@@ -21,9 +21,7 @@
     [btn sizeToFit];
     // 添加按钮点击事件
     [btn wh_addActionHandler:^(UIButton *sender) {
-        if (touchHandler) {
-            touchHandler(sender);
-        }
+        if (touchHandler) touchHandler(sender);
     }];
     UIView *containVew = [[UIView alloc] initWithFrame:btn.bounds];
     [containVew addSubview:btn];
@@ -42,9 +40,7 @@
     [btn sizeToFit];
     // 添加按钮点击事件
     [btn wh_addActionHandler:^(UIButton *sender) {
-        if (touchHandler) {
-            touchHandler(sender);
-        }
+        if (touchHandler) touchHandler(sender);
     }];
     UIView *containVew = [[UIView alloc] initWithFrame:btn.bounds];
     [containVew addSubview:btn];

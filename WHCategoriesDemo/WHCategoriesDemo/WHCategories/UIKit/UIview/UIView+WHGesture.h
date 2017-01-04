@@ -13,6 +13,7 @@ typedef void (^WHGestureActionBlock)(UIGestureRecognizer *gestureRecoginzer);
 
 /** 添加单击手势 */
 - (void)wh_addTapActionWithBlock:(WHGestureActionBlock)block;
+
 /** 添加长安手势 */
 - (void)wh_addLongPressActionWithBlock:(WHGestureActionBlock)block;
 

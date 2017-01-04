@@ -28,6 +28,9 @@
 		669F970B1DF6969B008CF98B /* NSDictionary+WHBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F970A1DF6969B008CF98B /* NSDictionary+WHBlock.m */; };
 		669F97131DF69F82008CF98B /* NSMutableArray+WHBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F97121DF69F82008CF98B /* NSMutableArray+WHBlock.m */; };
 		669F97161DF6ABA1008CF98B /* NSMutableDictionary+WHBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F97151DF6ABA1008CF98B /* NSMutableDictionary+WHBlock.m */; };
+		66A6ECA31E165DF500239075 /* UIImage+WHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6ECA21E165DF500239075 /* UIImage+WHExtension.m */; };
+		66A7F29F1E1C92EC0017E947 /* UITextField+WHPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A7F29E1E1C92EC0017E947 /* UITextField+WHPlaceholder.m */; };
+		66A7F2A31E1C93820017E947 /* NSFileManager+WHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A7F2A21E1C93820017E947 /* NSFileManager+WHExtension.m */; };
 		66C92C2F1DDADE11005CA1B7 /* UIButton+WHBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C92C2E1DDADE11005CA1B7 /* UIButton+WHBlock.m */; };
 		66C92C331DDAE2E6005CA1B7 /* UIAlertView+WHBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C92C321DDAE2E6005CA1B7 /* UIAlertView+WHBlock.m */; };
 /* End PBXBuildFile section */
@@ -95,6 +98,12 @@
 		669F97121DF69F82008CF98B /* NSMutableArray+WHBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+WHBlock.m"; sourceTree = "<group>"; };
 		669F97141DF6ABA1008CF98B /* NSMutableDictionary+WHBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+WHBlock.h"; sourceTree = "<group>"; };
 		669F97151DF6ABA1008CF98B /* NSMutableDictionary+WHBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+WHBlock.m"; sourceTree = "<group>"; };
+		66A6ECA11E165DF500239075 /* UIImage+WHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WHExtension.h"; sourceTree = "<group>"; };
+		66A6ECA21E165DF500239075 /* UIImage+WHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WHExtension.m"; sourceTree = "<group>"; };
+		66A7F29D1E1C92EC0017E947 /* UITextField+WHPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WHPlaceholder.h"; sourceTree = "<group>"; };
+		66A7F29E1E1C92EC0017E947 /* UITextField+WHPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WHPlaceholder.m"; sourceTree = "<group>"; };
+		66A7F2A11E1C93820017E947 /* NSFileManager+WHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+WHExtension.h"; sourceTree = "<group>"; };
+		66A7F2A21E1C93820017E947 /* NSFileManager+WHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+WHExtension.m"; sourceTree = "<group>"; };
 		66C92C2D1DDADE11005CA1B7 /* UIButton+WHBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WHBlock.h"; sourceTree = "<group>"; };
 		66C92C2E1DDADE11005CA1B7 /* UIButton+WHBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WHBlock.m"; sourceTree = "<group>"; };
 		66C92C311DDAE2E6005CA1B7 /* UIAlertView+WHBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+WHBlock.h"; sourceTree = "<group>"; };
@@ -207,6 +216,7 @@
 				666485B31DF01F7D00B25F94 /* NSArray */,
 				669F96FF1DF55B65008CF98B /* NSDate */,
 				669F97081DF69679008CF98B /* NSDictionary */,
+				66A7F2A01E1C935B0017E947 /* NSFileManager */,
 				669F970F1DF69F5E008CF98B /* NSMutableArray */,
 				669F97101DF69F5E008CF98B /* NSMutableDictionary */,
 				6626087A1DD3063B00F83B88 /* NSString */,
@@ -230,6 +240,8 @@
 				662608801DD3063B00F83B88 /* UIBarButtonItem */,
 				662608851DD3063B00F83B88 /* UIButton */,
 				6626088A1DD3063B00F83B88 /* UIColor */,
+				66A6ECA01E165DCA00239075 /* UIImage */,
+				66A6EC961E162B1500239075 /* UITextField */,
 				6626088D1DD3063B00F83B88 /* UIView */,
 			);
 			path = UIKit;
@@ -323,6 +335,33 @@
 				669F97151DF6ABA1008CF98B /* NSMutableDictionary+WHBlock.m */,
 			);
 			path = NSMutableDictionary;
+			sourceTree = "<group>";
+		};
+		66A6EC961E162B1500239075 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				66A7F29D1E1C92EC0017E947 /* UITextField+WHPlaceholder.h */,
+				66A7F29E1E1C92EC0017E947 /* UITextField+WHPlaceholder.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		66A6ECA01E165DCA00239075 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				66A6ECA11E165DF500239075 /* UIImage+WHExtension.h */,
+				66A6ECA21E165DF500239075 /* UIImage+WHExtension.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		66A7F2A01E1C935B0017E947 /* NSFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				66A7F2A11E1C93820017E947 /* NSFileManager+WHExtension.h */,
+				66A7F2A21E1C93820017E947 /* NSFileManager+WHExtension.m */,
+			);
+			path = NSFileManager;
 			sourceTree = "<group>";
 		};
 		66C92C301DDAE149005CA1B7 /* UIAlertView */ = {
@@ -474,6 +513,7 @@
 				662608981DD3063B00F83B88 /* UIColor+WHHEX.m in Sources */,
 				66C92C2F1DDADE11005CA1B7 /* UIButton+WHBlock.m in Sources */,
 				669F97021DF55B85008CF98B /* NSDate+WHExtension.m in Sources */,
+				66A7F2A31E1C93820017E947 /* NSFileManager+WHExtension.m in Sources */,
 				666485AF1DEFC08C00B25F94 /* UIView+WHGesture.m in Sources */,
 				66C92C331DDAE2E6005CA1B7 /* UIAlertView+WHBlock.m in Sources */,
 				662608931DD3063B00F83B88 /* NSString+WHNormalRegEx.m in Sources */,
@@ -481,8 +521,10 @@
 				662608941DD3063B00F83B88 /* UIBarButtonItem+WHBadge.m in Sources */,
 				6626084A1DD305F600F83B88 /* AppDelegate.m in Sources */,
 				666485B61DF01FE500B25F94 /* NSArray+WHBlock.m in Sources */,
+				66A7F29F1E1C92EC0017E947 /* UITextField+WHPlaceholder.m in Sources */,
 				669F970B1DF6969B008CF98B /* NSDictionary+WHBlock.m in Sources */,
 				662608961DD3063B00F83B88 /* UIButton+WHCountDown.m in Sources */,
+				66A6ECA31E165DF500239075 /* UIImage+WHExtension.m in Sources */,
 				662608471DD305F600F83B88 /* main.m in Sources */,
 				669F97161DF6ABA1008CF98B /* NSMutableDictionary+WHBlock.m in Sources */,
 				669F97131DF69F82008CF98B /* NSMutableArray+WHBlock.m in Sources */,

@@ -32,10 +32,7 @@ static const void *wh_LongPressGestureKey = &wh_LongPressGestureKey;
     if (gesture.state == UIGestureRecognizerStateRecognized)
     {
         WHGestureActionBlock block = objc_getAssociatedObject(self, wh_TapBlockKey);
-        if (block)
-        {
-            block(gesture);
-        }
+        if (block) block(gesture);
     }
 }
 
@@ -55,10 +52,7 @@ static const void *wh_LongPressGestureKey = &wh_LongPressGestureKey;
     if (gesture.state == UIGestureRecognizerStateBegan)
     {
         WHGestureActionBlock block = objc_getAssociatedObject(self, wh_LongPressBlockKey);
-        if (block)
-        {
-            block(gesture);
-        }
+        if (block) block(gesture);
     }
 }
 

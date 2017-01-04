@@ -10,6 +10,13 @@
 
 @interface UIButton (WHCountDown)
 
--(void)wh_startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle;
+/**
+ 让按钮进入倒计时
+ 
+ @param timeout 倒计时长
+ @param tittle 倒计时过程中显示的标题
+ @param waitTittle 倒计时完成显示的标题
+ */
+- (void)wh_startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle;
 
 @end

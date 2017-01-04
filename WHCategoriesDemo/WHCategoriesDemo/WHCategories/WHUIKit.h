@@ -16,6 +16,7 @@
 #import "UIButton+WHCountDown.h"
 #import "UIButton+WHImagePosition.h"
 #import "UIColor+WHHEX.h"
+#import "UITextField+WHPlaceholder.h"
 #import "UIView+WHFrame.h"
 #import "UIView+WHGesture.h"
 

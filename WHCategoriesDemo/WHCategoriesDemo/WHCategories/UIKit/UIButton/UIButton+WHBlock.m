@@ -22,9 +22,7 @@ static const void *wh_UIButtonBlockKey = &wh_UIButtonBlockKey;
 - (void)wh_blockActionTouched:(UIButton *)sender
 {
     WHTouchedButtonBlock block = objc_getAssociatedObject(self, wh_UIButtonBlockKey);
-    if (block) {
-        block(sender);
-    }
+    if (block) block(sender);
 }
 
 @end

@@ -12,6 +12,7 @@
 #import "NSArray+WHBlock.h"
 #import "NSDate+WHExtension.h"
 #import "NSDictionary+WHBlock.h"
+#import "NSFileManager+WHExtension.h"
 #import "NSMutableArray+WHBlock.h"
 #import "NSMutableDictionary+WHBlock.h"
 #import "NSString+WHNormalRegEx.h"
