@@ -9,38 +9,47 @@
 #ifndef WHMacros_h
 #define WHMacros_h
 
-/** 屏幕宽度 */
-#define wh_screenWidth [UIScreen mainScreen].bounds.size.width
 
-/** 屏幕高度 */
-#define wh_screenHeight [UIScreen mainScreen].bounds.size.height
+/** 一些缩写 */
+#define wh_keyWindow            [UIApplication sharedApplication].keyWindow
+#define wh_AppDelegate          [UIApplication sharedApplication].delegate
+#define wh_UserDefaults         [NSUserDefaults standardUserDefaults]
+#define wh_NotificationCenter   [NSNotificationCenter defaultCenter]
 
-/** 生成颜色值 */
-#define wh_RGB(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define wh_appVersion           [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] // app版本号
+#define kSystemVersion          [[UIDevice currentDevice] systemVersion] // 系统版本号
 
-/** 生成颜色值 可以设置透明度 */
-#define wh_RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
 
-/** 随机颜色值 */
-#define wh_randomColor wh_RGB(arc4randow_uniform(256)/255.0,arc4randow_uniform(256)/255.0,arc4randow_uniform(256)/255.0)
+/** 屏幕尺寸 */
+#define wh_screenWidth   [UIScreen mainScreen].bounds.size.width
+#define wh_screenHeight  [UIScreen mainScreen].bounds.size.height
 
-/** 十六进制颜色值 可设置透明度 */
+
+/** 颜色 */
+#define wh_clearColor     [UIColor clearColor]
+
+#define wh_RGB(r,g,b)     [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+#define wh_RGBA(r,g,b,a)  [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
+
+#define wh_randomColor    wh_RGB(arc4randow_uniform(256)/255.0,arc4randow_uniform(256)/255.0,arc4randow_uniform(256)/255.0)
+
 #define wh_colorWithHex(rgbValue,a) [UIColor colorWithRed : ((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green : ((float)((rgbValue & 0xFF00) >> 8)) / 255.0 blue : ((float)(rgbValue & 0xFF)) / 255.0 alpha : a]
 
-/** 弱引用 */
-#define wh_weakSelf(type) __weak typeof(type) weak##type = type;
 
-/** 强引用 */
-#define wh_strongSelf(type)  __strong typeof(type) type = weak##type;
+/** 弱引用/强引用 */
+#define wh_weakSelf(type)     __weak typeof(type) weak##type = type
+#define wh_strongSelf(type)   __strong typeof(type) type = weak##type
 
-/** 由角度转换弧度 */
-#define wh_degreesToRadian(x) (M_PI * (x) / 180.0)
-
-/** 由弧度转换角度 */
-#define wh_radianToDegrees(radian) (radian * 180.0) / (M_PI)
+/** 由角度转换弧度/由弧度转换角度 */
+#define wh_degreesToRadian(x)       (M_PI * (x) / 180.0)
+#define wh_radianToDegrees(radian)  (radian * 180.0) / (M_PI)
 
 /** 定义UIImage对象 */
-#define wh_mageNamed(imageName) [UIImage imageNamed:imageName]
+#define wh_imageNamed(imageName) [UIImage imageNamed:imageName]
+
+/** 字符串拼接 */
+#define wh_appendingStr(__str1__,__str2__) [NSString stringWithFormat:@"%@%@",__str1__,__str2__]
 
 /** 打印输出 */
 #if DEBUG
@@ -58,5 +67,21 @@
 [View.layer setBorderColor:[Color CGColor]]
 
 
+/** 存储对象 */
+#define wh_UserDefaultSetObjectForKey(__VALUE__,__KEY__) \
+{\
+[[NSUserDefaults standardUserDefaults] setObject:__VALUE__ forKey:__KEY__];\
+[[NSUserDefaults standardUserDefaults] synchronize];\
+}
+
+/** 获取存储对象 */
+#define wh_UserDefaultGetObjectForKey(__KEY__)  [[NSUserDefaults standardUserDefaults] objectForKey:__KEY__]
+
+/** 删除对象 */
+#define wh_UserDefaultRemoveObjectForKey(__KEY__) \
+{\
+[[NSUserDefaults standardUserDefaults] removeObjectForKey:__KEY__];\
+[[NSUserDefaults standardUserDefaults] synchronize];\
+}
 
 #endif /* WHMacros_h */
